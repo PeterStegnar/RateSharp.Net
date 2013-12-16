@@ -11,6 +11,7 @@
 using System;
 using System.IO;
 using System.Net;
+using System.Text.RegularExpressions;
 
 namespace RateSharp.Net.Util
 {
@@ -23,29 +24,25 @@ namespace RateSharp.Net.Util
         /// <returns>Json response</returns>
         internal static string Get(string url)
         {
-            try
-            {
-                string content;
-                var request = (HttpWebRequest) WebRequest.Create(url);
-                request.UserAgent = "RatesSharp";
-                request.Accept = "*/*";
-                request.Headers.Add("Accept-Language: en-US,en;q=0.5");
+            string content;
+            var request = (HttpWebRequest) WebRequest.Create(url);
+            request.UserAgent = "RatesSharp.Net";
+            request.Accept = "*/*";
+            request.Headers.Add("Accept-Language: en-US,en;q=0.5");
 
-                using (var response = (HttpWebResponse) request.GetResponse())
+            using (var response = (HttpWebResponse) request.GetResponse())
+            {
+                using (var stream = response.GetResponseStream())
                 {
-                    using (var stream = response.GetResponseStream())
-                    {
-                        if (stream == null) return "Error: HttpWebResponse is null";
-                        using (var streamReader = new StreamReader(stream)) content = streamReader.ReadToEnd();
-                    }
+                    if (stream == null) throw new Exception("Stream is null");
+                    using (var streamReader = new StreamReader(stream)) content = streamReader.ReadToEnd();
+                    
+                    var errorCheck = Regex.Match(content, @"""error"": ""([^""]*)""");
+                    if (!string.IsNullOrWhiteSpace(errorCheck.Groups[1].Value)) throw new Exception(errorCheck.Groups[1].Value);
                 }
+            }
 
-                return content;
-            }
-            catch (Exception exception)
-            {
-                return "Error: " + exception.Message;
-            }
+            return content;
         }
     }
 }

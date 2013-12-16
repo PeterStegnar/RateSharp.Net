@@ -45,10 +45,13 @@
     <Compile Include="Converter\DateTimeConverter.cs" />
     <Compile Include="Enums\Symbol.cs" />
     <Compile Include="Enums\TimePeriod.cs" />
-    <Compile Include="Models\Bar.cs" />
+    <Compile Include="Models\SymbolLot.cs" />
+    <Compile Include="Models\SymbolBar.cs" />
     <Compile Include="Models\Period.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rates.cs" />
+    <Compile Include="RatesDedi.cs" />
+    <Compile Include="RatesLite.cs" />
+    <Compile Include="Util\Extension.cs" />
     <Compile Include="Util\Web.cs" />
   </ItemGroup>
   <ItemGroup>

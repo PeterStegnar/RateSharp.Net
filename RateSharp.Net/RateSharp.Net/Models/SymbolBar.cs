@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace RateSharp.Net.Models
 {
-    public class Bar
+    public class SymbolBar
     {
         [JsonProperty("close")]
         public decimal Close { get; set; }

@@ -75,6 +75,6 @@ namespace RateSharp.Net.Enums
         USDILS,
         XPTUSD,
         XPDUSD,
-        TRYJPY
+        TRYJPY,
     }
 }
