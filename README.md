@@ -3,31 +3,30 @@ RateSharp.Net
 RateSharp.Net is a C# library for [APIRates](http://apirates.com), a real-time FOREX API.
 
 
-# Examples
-Retrieves the most recent update on the USDCAD pair on the 1M period and prints to console.
+# Examples 
+The examples below are demonstrating the RatesLite class which can only retrieve data on the EURUSD symbol.
+It's meant for testing purposes only.
 
-    Bar bar = Rates.Get(TimePeriod.M1, Symbol.USDCAD);
-    
+Retrieves the most recent update on the symbol EURUSD and prints to console.
+
+    var bar = RatesLite.GetBarUpdate(TimePeriod.M1);
+
     Console.WriteLine("Open:       {0}", bar.Open);
     Console.WriteLine("Close:      {0}", bar.Close);
     Console.WriteLine("High:       {0}", bar.High);
     Console.WriteLine("Low:        {0}", bar.Low);
-    Console.WriteLine("Time stamp: {0}", bar.Timestamp);
+    Console.WriteLine("Time stamp: {0}", bar.Timestamp);;
 
-Retrieves the most recent update on USDCAD pair on **all** periods and prints to console.
+Retrieves the pricing history on the symbol EURUSD.
 
-    Period periods = Rates.GetAll(Symbol.USDCAD);
-    PropertyInfo[] periodProperties = periods.GetType().GetProperties();
+    var symbolHistory = RatesLite.GetBarHistory(TimePeriod.M5, DateTime.UtcNow.Subtract(TimeSpan.FromHours(1)));
 
-    foreach (PropertyInfo property in periodProperties)
+    foreach (var symbolBar in symbolHistory)
     {
-        Bar bar = (Bar) property.GetValue(periods);
-
-        Console.WriteLine("Period:     {0}", property.Name);
-        Console.WriteLine("Open:       {0}", bar.Open);
-        Console.WriteLine("Close:      {0}", bar.Close);
-        Console.WriteLine("High:       {0}", bar.High);
-        Console.WriteLine("Low:        {0}", bar.Low);
-        Console.WriteLine("Time stamp: {0}\n", bar.Timestamp);
+        Console.WriteLine("\nOpen:       {0}", symbolBar.Open);
+        Console.WriteLine("Close:      {0}", symbolBar.Close);
+        Console.WriteLine("High:       {0}", symbolBar.High);
+        Console.WriteLine("Low:        {0}", symbolBar.Low);
+        Console.WriteLine("Time stamp: {0}", symbolBar.Timestamp);
     }
 
