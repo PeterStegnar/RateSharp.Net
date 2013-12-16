@@ -25,7 +25,7 @@ namespace RateSharp.Net
         /// <param name="timePeriod">The time period</param>
         /// <param name="symbol">The symbol</param>
         /// <returns>Most recent bar data</returns>
-        public Bar Get(TimePeriod timePeriod, Symbol symbol)
+        public static Bar Get(TimePeriod timePeriod, Symbol symbol)
         {
             var url = string.Format("http://api.apirates.com/update/FREE/{0}/{1}", timePeriod, symbol);
             var json = Web.Get(url);
@@ -37,7 +37,7 @@ namespace RateSharp.Net
         /// </summary>
         /// <param name="symbol">The symbol</param>
         /// <returns>Most recent bar data on all time periods</returns>
-        public Period GetAll(Symbol symbol)
+        public static Period GetAll(Symbol symbol)
         {
             var url = string.Format("http://api.apirates.com/update/FREE/ALL/{0}", symbol);
             var json = Web.Get(url);

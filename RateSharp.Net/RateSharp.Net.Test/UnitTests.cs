@@ -35,7 +35,7 @@ namespace RateSharp.Net.Test
         [TestCase]
         public void Can_Deserialize_Bar()
         {
-            var bar = new Rates().Get(TimePeriod.M1, Symbol.USDCAD);
+            var bar = Rates.Get(TimePeriod.M1, Symbol.USDCAD);
 
             Console.WriteLine("Open:       {0}", bar.Open);
             Console.WriteLine("Close:      {0}", bar.Close);
@@ -47,7 +47,7 @@ namespace RateSharp.Net.Test
         [TestCase]
         public void Can_Deserialize_All_Periods()
         {
-            var periods = new Rates().GetAll(Symbol.USDCAD);
+            var periods = Rates.GetAll(Symbol.USDCAD);
             var periodProperties = periods.GetType().GetProperties();
 
             foreach (var property in periodProperties)
