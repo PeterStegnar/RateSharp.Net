@@ -2,7 +2,7 @@ RateSharp.Net
 =============
 RateSharp.Net is a C# library for [APIRates](http://apirates.com), a real-time FOREX API.
 
-***
+
 # Examples
 Retrieves the most recent update on the USDCAD pair on the 1M period and prints to console.
 
