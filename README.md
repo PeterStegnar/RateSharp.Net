@@ -125,3 +125,7 @@ RateSharp.Net
         Console.WriteLine("Low:        {0}", bar.Low);
         Console.WriteLine("Time stamp: {0}\n", bar.Timestamp);
     }
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/AydinAdn/ratesharp.net/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
