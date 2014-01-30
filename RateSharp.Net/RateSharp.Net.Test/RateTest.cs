@@ -15,7 +15,7 @@ namespace RateSharp.Net.Test
         {
          /* Enter your API Key below.
           * ******************************************/
-            const string apiKey = "OK110023";
+            const string apiKey = "";
          /* ******************************************/
 
             var day = DateTime.UtcNow.DayOfWeek;
