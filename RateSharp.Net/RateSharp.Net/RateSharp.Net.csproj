@@ -11,6 +11,7 @@
     <AssemblyName>RateSharp.Net</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -35,27 +38,24 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <Reference Include="Utilities, Version=1.1.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AydinUtilities.1.1.1.2\lib\net45\Utilities.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Converter\DateTimeConverter.cs" />
-    <Compile Include="Enums\Symbol.cs" />
-    <Compile Include="Enums\TimePeriod.cs" />
-    <Compile Include="Models\SymbolLot.cs" />
-    <Compile Include="Models\SymbolBar.cs" />
-    <Compile Include="Models\Period.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RatesDedi.cs" />
-    <Compile Include="RatesLite.cs" />
-    <Compile Include="Util\Extension.cs" />
-    <Compile Include="Util\Web.cs" />
+    <Compile Include="Rates.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RateSharp.Net.Models\RateSharp.Net.Models.csproj">
+      <Project>{9b7ea7d3-be87-449b-b87c-5b25e9712977}</Project>
+      <Name>RateSharp.Net.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
