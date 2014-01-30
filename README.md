@@ -2,7 +2,7 @@ RateSharp.Net
 =============
 ### RateSharp.Net is a C# library for [APIRates](http://apirates.com), a real-time FOREX API.
 
-###### Pricing data provided in the API are valid real-time data from their respective markets, but meant for testing purposes.
+Pricing data provided in the API are valid real-time data from their respective markets, but meant for testing purposes.
 
 # Examples 
 
