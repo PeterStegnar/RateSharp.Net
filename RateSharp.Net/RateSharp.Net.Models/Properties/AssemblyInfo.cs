@@ -1,40 +1,25 @@
-﻿//  ***********************************************************************
-//   Solution	: RateSharp.Net
-//   Project	: RateSharp.Net
-//   Author		: F Aydin
-//   Created	: 23:07, 15:12:2013
-//    
-//   Last Modified By	: F Aydin
-//   Last Modified On 	: 01:17, 16:12:2013
-//  ***********************************************************************
-
-using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-
-[assembly: AssemblyTitle("RateSharp.Net")]
+[assembly: AssemblyTitle("RateSharp.Net.Models")]
 [assembly: AssemblyDescription("A .Net library for APIRates.com")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("RateSharp.Net")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyProduct("RateSharp.Net.Models")]
+[assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
-
 [assembly: ComVisible(false)]
-[assembly: InternalsVisibleTo("RateSharp.Net.Test")]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-
-[assembly: Guid("46d7210e-43f9-4aaf-9fd6-f46e9beceb01")]
+[assembly: Guid("7d170d21-e97e-4e11-8c18-28cf392e7f04")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -46,6 +31,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-
 [assembly: AssemblyVersion("1.0.1")]
 [assembly: AssemblyFileVersion("1.0.1")]

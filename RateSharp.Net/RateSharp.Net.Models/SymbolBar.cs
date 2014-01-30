@@ -1,15 +1,4 @@
-﻿//  ***********************************************************************
-//   Solution	: RateSharp.Net
-//   Project	: RateSharp.Net
-//   Author		: F Aydin
-//   Created	: 23:08, 15:12:2013
-//    
-//   Last Modified By	: F Aydin
-//   Last Modified On 	: 00:51, 16:12:2013
-//  ***********************************************************************
-
-using System;
-
+﻿using System;
 using Newtonsoft.Json;
 
 namespace RateSharp.Net.Models
