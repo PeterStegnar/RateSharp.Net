@@ -2,17 +2,19 @@ RateSharp.Net
 =============
 ### RateSharp.Net is a C# library for [APIRates](http://apirates.com), a real-time FOREX API.
 
-###### Pricing data provided in the API are valid real-time data from their respective markets, but meant for testing purposes only.
+###### Pricing data provided in the API instance are valid real-time data from markets, but meant for testing purposes only.
+###### You can use it at your own responsibility.
+
 
 # Examples 
 
 ##### There are two seperate classes in this library:
--  `RatesDedi.cs` is a class for clients who own an APIKey from APIRates.com,
--  `RatesLite.cs` is for users who wish to test the API, however it does have a limitation, it only provides data on the `EURUSD` symbol alone.
+-  `RatesDedi.cs` is for clients who own an APIKey from APIRates.com,
+-  `RatesLite.cs` is for users who wish to simply test the API, and can access the `EURUSD` symbol alone.
 
 ---
 #### RatesLite
-##### The examples below demonstrate how to use the `RatesLite` class.
+##### The examples below are demonstrating the `RatesLite` class.
 
 -
 ###### Retrieves the most recent update on the symbol `EURUSD` and prints to console.
