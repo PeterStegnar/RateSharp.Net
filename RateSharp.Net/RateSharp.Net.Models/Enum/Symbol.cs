@@ -1,14 +1,4 @@
-﻿//  ***********************************************************************
-//   Solution	: RateSharp.Net
-//   Project	: RateSharp.Net
-//   Author		: F Aydin
-//   Created	: 23:08, 15:12:2013
-//    
-//   Last Modified By	: F Aydin
-//   Last Modified On 	: 00:54, 16:12:2013
-//  ***********************************************************************
-
-namespace RateSharp.Net.Enums
+﻿namespace RateSharp.Net.Models.Enum
 {
     public enum Symbol
     {

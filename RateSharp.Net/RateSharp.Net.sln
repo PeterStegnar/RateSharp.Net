@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateSharp.Net", "RateSharp.Net\RateSharp.Net.csproj", "{352D989E-7312-42B5-913A-0719565653FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateSharp.Net.Test", "RateSharp.Net.Test\RateSharp.Net.Test.csproj", "{705F2A77-28D8-4572-BD85-AF32C79F3702}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateSharp.Net.Free", "RateSharp.Net.Free\RateSharp.Net.Free.csproj", "{003A574A-C1D0-4052-8436-990264AF3A19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateSharp.Net.Models", "RateSharp.Net.Models\RateSharp.Net.Models.csproj", "{9B7EA7D3-BE87-449B-B87C-5B25E9712977}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +25,14 @@ Global
 		{705F2A77-28D8-4572-BD85-AF32C79F3702}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{705F2A77-28D8-4572-BD85-AF32C79F3702}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{705F2A77-28D8-4572-BD85-AF32C79F3702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{003A574A-C1D0-4052-8436-990264AF3A19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{003A574A-C1D0-4052-8436-990264AF3A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{003A574A-C1D0-4052-8436-990264AF3A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{003A574A-C1D0-4052-8436-990264AF3A19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B7EA7D3-BE87-449B-B87C-5B25E9712977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B7EA7D3-BE87-449B-B87C-5B25E9712977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B7EA7D3-BE87-449B-B87C-5B25E9712977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B7EA7D3-BE87-449B-B87C-5B25E9712977}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
